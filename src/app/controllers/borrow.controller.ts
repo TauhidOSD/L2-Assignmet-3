@@ -22,7 +22,8 @@ export const borrowBook: RequestHandler = async (req, res) => {
 
     foundBook.copies -= quantity;
 
-    foundBook.available = foundBook.copies > 0;
+     foundBook.markAvailable();
+    //foundBook.available = foundBook.copies > 0;
 
     await foundBook.save();
 
