@@ -96,7 +96,7 @@ export const updateBook = async (req: Request, res: Response) => {
 
 // delete book
 
-export const deleteBook = async (req: Request, res: Response)=> {
+export const deleteBook = async (req: Request, res: Response) => {
   try {
     const book = await Book.findByIdAndDelete(req.params.bookId);
 

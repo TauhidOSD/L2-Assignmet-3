@@ -11,7 +11,7 @@ export const borrowBook: RequestHandler = async (req, res) => {
     if (!foundBook) {
 
       res.status(404).json({ success: false, message: 'Book not found' });
-      return;  
+      return;
     }
 
     if (foundBook.copies < quantity) {
@@ -22,8 +22,8 @@ export const borrowBook: RequestHandler = async (req, res) => {
 
     foundBook.copies -= quantity;
 
-     foundBook.markAvailable();
-    
+    foundBook.markAvailable();
+
 
     await foundBook.save();
 
@@ -50,7 +50,7 @@ export const getBorrowedSummary: RequestHandler = async (req, res) => {
 
       { $unwind: '$book' },
 
-       { $project: { _id: 0, book: { title: '$book.title', isbn: '$book.isbn' }, totalQuantity: 1 } }
+      { $project: { _id: 0, book: { title: '$book.title', isbn: '$book.isbn' }, totalQuantity: 1 } }
 
     ]);
 
@@ -60,7 +60,7 @@ export const getBorrowedSummary: RequestHandler = async (req, res) => {
       data: summary,
     });
   } catch (error) {
-    
+
     res.status(500).json({ success: false, message: 'Internal server error', error });
   }
 };

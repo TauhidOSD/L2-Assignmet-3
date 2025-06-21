@@ -1,4 +1,3 @@
-// src/app/routes/borrow.routes.ts
 import express from "express";
 import { borrowBook, getBorrowedSummary } from "../controllers/borrow.controller";
 

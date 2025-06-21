@@ -8,7 +8,7 @@ export interface IBook extends Document {
   description?: string;
   copies: number;
   available: boolean;
-   markAvailable: () => void; 
+  markAvailable: () => void;
 }
 
 const bookSchema = new Schema<IBook>(
