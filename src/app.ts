@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/borrow', borrowRoutes);
-app.use('/api/books', bookRoutes);
+app.use('/borrow', borrowRoutes);
+app.use('/books', bookRoutes);
 
 export default app;

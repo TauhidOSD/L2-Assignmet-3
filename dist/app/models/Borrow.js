@@ -39,7 +39,8 @@ const borrowSchema = new mongoose_1.Schema({
     book: { type: mongoose_1.Schema.Types.ObjectId, ref: 'Book', required: true },
     quantity: { type: Number, required: true, min: 1 },
     dueDate: { type: Date, required: true }
-}, { timestamps: true,
+}, {
+    timestamps: true,
     versionKey: false
 });
 exports.Borrow = mongoose_1.default.model('Borrow', borrowSchema);
