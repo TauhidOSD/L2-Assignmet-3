@@ -75,14 +75,7 @@ Shows total borrowed copies per book using aggregation.
 4. Start the server with `npm run dev`.  
 5. Use Postman or any API client to test the endpoints.
 
----
 
-## Bonus Tips
 
-- Code is clean and easy to read.  
-- All endpoints follow the exact format requested.  
-- Errors are handled properly and responses are consistent.
-
----
 
 Thank you for checking out my project! 

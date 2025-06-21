@@ -10,6 +10,6 @@ const book_routes_1 = __importDefault(require("./app/routes/book.routes"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-app.use('/borrow', borrow_routes_1.default);
-app.use('/books', book_routes_1.default);
+app.use('/api/borrow', borrow_routes_1.default);
+app.use('/api/books', book_routes_1.default);
 exports.default = app;
